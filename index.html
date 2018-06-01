@@ -66,6 +66,272 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-CSS_selector" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/06/01/CSS_selector/" class="article-date">
+  <time datetime="2018-06-01T03:09:25.981Z" itemprop="datePublished">2018-06-01</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+
+        <!-- 메타 태그는 정보를 넣어준다-->
+        <title>데이터 사이언스 스쿨</title>
+        <style media="screen">
+
+            /* css selector *
+
+            /* 1. ID selector */
+            /* 아이디를 셀렉할 때는 #(아이디 이름)으로 선택한다 */
+            /* 여러 개를 선택할 때는 "," 로 구분해서 넣어준다 */
+            /*  가능하면 ID로 셀렉팅을 해주는 것이 좋다 */
+            /* #ds2, #d3{
+                color: red;
+            } */
+
+            /* 2. Class selector */
+            /* 클래스를 셀렉할 때는 .(클래스 이름)으로 선택한다 */
+            /* 엘리먼트를 묶어서 같은 CSS를 적용할 때 사용한다 */
+
+            /* .ds1{
+                font-size: 24px;
+                margin: 5px 20px 10px 30px;
+            } */
+
+            /* 3. Not selector */
+            /* 셀렉터로 엘리먼트를 하나만 제거하고 싶을 때 사용한다  */
+            /* .ds:not(.ds2){
+                color : blue;
+            } */
+
+            /* 4. first-child selector */
+            /* .ds:first-child{
+                background-color: yellow;
+            } */
+
+            /* 5. first-child selector */
+            /* .ds:last-child{
+                background-color: yellow;
+            } */
+
+            /* 6.nth- : n번째 child를 이용해서 엘리먼트 셀렉트 */
+            .ds:nth_child(4), .ds:nth-child(3){
+                background-color: yellow;
+            }
+
+            /* 7. deepth, level로 엘리먼트 셀렉트 */
+            /* 공백문자로 하위 엘리먼트를 셀렉트 했을때, 모든 하위 엘리먼트를 셀렉팅합니다  */
+            .constants h1{
+                font-weight: lighter;
+            }
+
+body > div > h1{
+    color: red;
+}
+
+
+
+        </style>
+    </head>
+    <body>
+        <p id="ds1">dss1</p>
+        <p id="ds2">dss2</p>
+        <p id="ds3">dss3</p>
+
+        <p class="ds1">dss1</p>
+        <p class="ds1">dss2</p>
+        <p class="ds2">dss3</p>
+        <p class="ds2">dss4</p>
+
+        <p class="ds ds1">ds1</p>
+        <p class="ds ds2">ds2</p>
+        <p class="ds ds3">ds3</p>
+        <p class="ds ds4">ds4</p>
+        <p class="ds ds5">ds5</p>
+
+        <div class="contants">
+            <h1>inner_1</h1>
+            <div class="txt">
+                <h1>inner_2</h1>
+            </div>
+        </div>
+
+
+
+    </body>
+</html>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://seokyeongheo.github.io/2018/06/01/CSS_selector/" data-id="cjhve480x0006drj9rgm9mlbl" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-CSS-selector" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/06/01/CSS-selector/" class="article-date">
+  <time datetime="2018-06-01T03:08:04.000Z" itemprop="datePublished">2018-06-01</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/06/01/CSS-selector/">CSS_selector</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://seokyeongheo.github.io/2018/06/01/CSS-selector/" data-id="cjhve26em0005drj98czg9bcv" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-HTML_layout" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/06/01/HTML_layout/" class="article-date">
+  <time datetime="2018-06-01T02:15:36.649Z" itemprop="datePublished">2018-06-01</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>HTML_layout.html</title>
+        date: 2018-06-01 11:15:36
+        tags:
+    </head>
+    <body>
+
+        <h3>1. div : 레이아웃을 나타내는 엘리먼트</h3>
+
+        <div style="height: 100px; background-color: red;">
+            dss1
+        </div>
+
+        <h3>2. table : 테이블 모양을 나타낼 때</h3>
+
+            <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">table&gt;caption+thread&gt;tr&gt;th&#123;thread$&#125;*2^^tbody&gt;tr&gt;th&#123;tbody$&#125;*2</span><br></pre></td></tr></table></figure>
+
+            <table>
+                <caption>제목이오</caption>
+                <thread>
+                    <tr>
+                        <th>thread1</th>
+                        <th>thread2</th>
+                    </tr>
+                </thread>
+                <tbody>
+                    <tr>
+                        <th>tbody1</th>
+                        <th>tbody2</th>
+                    </tr>
+                </tbody>
+            </table>
+
+        <h3>3.ul, li : 리스트 엘리먼트</h3>
+
+            <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ul&gt;li$&#123;3&#125;</span><br></pre></td></tr></table></figure>
+
+        <h3>4. a : 링크 엘리먼트 </h3>
+            <p>href : 클릭했을 때 이동되는 url 링크</p>
+            <a href="https://www.naver.com/" target="_blank" rel="noopener">naver!</a>
+
+        <h3>5. img : 이미지 엘리먼트</h3>
+            <img src="http://cdn.www.fastcampus.co.kr/wp-content/uploads/2018/05/event_june2018_weekend_page_1@2x-900x1100.png" alt="패스트캠퍼스">
+            <p>```img src```를 사용해서 이미지 삽입</p>
+
+        <h3>6. iframe : 아이프레임 엘리먼트</h3>
+            <iframe src="file:///Users/quartz/dev/myblog/source/_posts/index.html" width="50%" height="50%">
+            </iframe>
+
+        <h3>7. text, radio, password, checkhox ... : 입력 엘리먼트</h3>
+
+
+            <input type="text" name="" value""="" placeholder="">
+            <input type="password" name="" value""="">
+
+            <input type="radio" name="radio1" value""="">1
+            <input type="radio" name="radio1" value""="">2
+            <br>
+            <input type="radio" name="radio2" value""="">3
+            <input type="radio" name="radio2" value""="">4
+            <input type="radio" name="radio2" value""="">5
+            <br>
+            <input type="checkbox" name="" value""="">6
+            <input type="checkbox" name="" value""="">7
+
+        <h3>8.text area : 여러 줄을 입력 받을 수 있는 엘리먼</h3>
+
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+
+        <h3>9.select, option : 여러가지 옵션을 선택할 수 있는 엘리먼트</h3>
+
+        `select>option[value=$]{option $}*`
+
+        <select name="" id="">
+            <option value="1">option 1</option>
+            <option value="2">option 2</option>
+            <option value="3">option 3</option>
+        </select>
+
+
+        <h3>10.button : 버튼을 나타내는 엘리먼트</h3>
+            
+
+    </body>
+</html>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://seokyeongheo.github.io/2018/06/01/HTML_layout/" data-id="cjhvc7juo0004drj9n9zzwbxi" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-HTML_intro" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/06/01/HTML_intro/" class="article-date">
@@ -80,7 +346,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/06/01/HTML_intro/">HTML 기본 개념</a>
+      <a class="article-title" href="/2018/06/01/HTML_intro/">HTML_01</a>
     </h1>
   
 
@@ -115,21 +381,41 @@
 <p></p><h5> head tag를 넣어봅시다<p></p>
 <p></p><h6> head tag를 넣어봅시다<p></p>
 <h3 id="2-Paragraph"><a href="#2-Paragraph" class="headerlink" title="2. Paragraph"></a>2. Paragraph</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;데이터 사이언스&lt;/p&gt;</span><br><span class="line">&lt;p&gt;패스트 캠퍼스&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+<pre>
+데이터 사이언스
+패스트 캠퍼스
+</pre>
+
+
 <h3 id="3-Span"><a href="#3-Span" class="headerlink" title="3. Span"></a>3. Span</h3><ul>
 <li>한 블럭의 문자열을 표현하기 위한 엘리먼트</li>
 <li>p 태그와 달리, 블럭 형태로 출력한다</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">span.s$&#123;span-tag-$@0&#125;*3</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;span class=&quot;s1&quot;&gt;span-tag-0&lt;/span&gt;</span><br><span class="line">&lt;span class=&quot;s2&quot;&gt;span-tag-1&lt;/span&gt;</span><br><span class="line">&lt;span class=&quot;s3&quot;&gt;span-tag-2&lt;/span&gt;</span><br></pre></td></tr></table></figure>
+<pre>
+<span class="s1">span-tag-0</span>
+<span class="s2">span-tag-1</span>
+<span class="s3">span-tag-2</span>
+</pre>
+
+
 <h3 id="4-PRE"><a href="#4-PRE" class="headerlink" title="4. PRE"></a>4. PRE</h3><ul>
 <li>줄 바꿈이나 띄어쓰기가 적용되는 엘리먼트</li>
-<li>코드라인 출력할 때 주로 사용한다.<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;</span><br><span class="line">    python</span><br><span class="line">    datascience</span><br><span class="line">&lt;/p&gt;</span><br><span class="line"></span><br><span class="line">&lt;pre&gt;</span><br><span class="line">    python</span><br><span class="line">    datascience</span><br><span class="line">&lt;/pre&gt;</span><br></pre></td></tr></table></figure>
-</li>
+<li>코드라인 출력할 때 주로 사용한다.</li>
 </ul>
-<h3 id="5-b-strong-강조-굵은-글씨"><a href="#5-b-strong-강조-굵은-글씨" class="headerlink" title="5. b, strong : 강조, 굵은 글씨"></a>5. b, strong : 강조, 굵은 글씨</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;&lt;b&gt;강조한다, 굵다!&lt;/b&gt;&lt;/p&gt;</span><br><span class="line">&lt;p&gt;&lt;strong&gt;강조한다, 굵다!&lt;/strong&gt;&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;</span><br><span class="line">    python</span><br><span class="line">    datascience</span><br><span class="line">&lt;/p&gt;</span><br><span class="line"></span><br><span class="line">&lt;pre&gt;</span><br><span class="line">    python</span><br><span class="line">    datascience</span><br><span class="line">&lt;/pre&gt;</span><br></pre></td></tr></table></figure>
 <pre>
-<b>강조한다, 굵다!</b>
-<strong>강조한다, 굵다!</strong>
+    python
+    datascience
+
+    python
+    datascience
 </pre>
+
+<h3 id="5-b-strong-강조-굵은-글씨"><a href="#5-b-strong-강조-굵은-글씨" class="headerlink" title="5. b, strong : 강조, 굵은 글씨"></a>5. b, strong : 강조, 굵은 글씨</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;&lt;b&gt;강조한다, 굵다!&lt;/b&gt;&lt;/p&gt;</span><br><span class="line">&lt;p&gt;&lt;strong&gt;강조한다, 굵다!&lt;/strong&gt;&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+<pre><b>강조한다, 굵다!</b>
+<strong>강조한다, 굵다!</strong></pre>
+
 
 
 <h3 id="6-i-em-이탤릭체"><a href="#6-i-em-이탤릭체" class="headerlink" title="6. i, em : 이탤릭체"></a>6. i, em : 이탤릭체</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;&lt;i&gt;기울여봅시다&lt;/i&gt;&lt;/p&gt;</span><br><span class="line">&lt;p&gt;&lt;em&gt;기울여봅시다&lt;/em&gt;&lt;/p&gt;</span><br></pre></td></tr></table></figure>
@@ -140,15 +426,26 @@
 
 
 <h3 id="7-sub-sup-아래첨자-윗첨자"><a href="#7-sub-sup-아래첨자-윗첨자" class="headerlink" title="7. sub, sup : 아래첨자, 윗첨자"></a>7. sub, sup : 아래첨자, 윗첨자</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;아래첨자&lt;sub&gt;아래첨자&lt;/sub&gt;&lt;/p&gt;</span><br><span class="line">&lt;p&gt;윗첨자&lt;sub&gt;윗첨자&lt;/sub&gt;&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+<pre>
+아래첨자<sub>아래첨자</sub>
+윗첨자<sub>윗첨자</sub>
+</pre>
+
 <h3 id="8-small-mark-작은-글씨-글자배경-노란색"><a href="#8-small-mark-작은-글씨-글자배경-노란색" class="headerlink" title="8. small, mark : 작은 글씨, 글자배경(노란색)"></a>8. small, mark : 작은 글씨, 글자배경(노란색)</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;작은글씨&lt;small&gt;작은글씨&lt;/small&gt;&lt;/p&gt;</span><br><span class="line">&lt;p&gt;글자배경&lt;mark&gt;노란색&lt;/mark&gt;&lt;p&gt;</span><br></pre></td></tr></table></figure>
+<p><pre><br>작은글씨<small>작은글씨</small><br>글자배경<mark>노란색</mark></pre></p>
+<pre>
+
 <h3 id="9-del-ins-삭제-문자열-언더라인-문자열"><a href="#9-del-ins-삭제-문자열-언더라인-문자열" class="headerlink" title="9. del, ins : 삭제 문자열, 언더라인 문자열"></a>9. del, ins : 삭제 문자열, 언더라인 문자열</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;삭제문자열&lt;del&gt;삭제문자열&lt;/del&gt;&lt;/p&gt;</span><br><span class="line">&lt;p&gt;언더라인&lt;ins&gt;언더라인&lt;/ins&gt;&lt;p&gt;</span><br></pre></td></tr></table></figure>
-<p><pre><br>삭제문자열<del>삭제문자열</del><br>언더라인<ins>언더라인</ins><pre></pre></pre></p>
+<p><pre><br>삭제문자열<del>삭제문자열</del><br>언더라인<ins>언더라인</ins></pre></p>
+<pre>
+
+
 <h3 id="10-code-코드-들여쓰기-공백은-적용되지-않는다"><a href="#10-code-코드-들여쓰기-공백은-적용되지-않는다" class="headerlink" title="10. code : 코드 : 들여쓰기, 공백은 적용되지 않는다"></a>10. code : 코드 : 들여쓰기, 공백은 적용되지 않는다</h3><p><code><br>    var a = 10;<br>    print(1234);<br></code></p>
-</h6></h5></h4></h3></h2></h1>
+</pre></pre></h6></h5></h4></h3></h2></h1>
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://seokyeongheo.github.io/2018/06/01/HTML_intro/" data-id="cjhvbksf20002tij99ebtge9q" class="article-share-link">Share</a>
+      <a data-url="https://seokyeongheo.github.io/2018/06/01/HTML_intro/" data-id="cjhvap6mb0000drj9zqm4hznd" class="article-share-link">Share</a>
       
       
     </footer>
@@ -174,7 +471,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://seokyeongheo.github.io/2018/06/01/test/" data-id="cjhvbksdw0000tij92gctig3x" class="article-share-link">Share</a>
+      <a data-url="https://seokyeongheo.github.io/2018/06/01/test/" data-id="cjhva8g2l00003jj9bywxf7ut" class="article-share-link">Share</a>
       
       
     </footer>
@@ -238,7 +535,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://seokyeongheo.github.io/2018/06/01/index/" data-id="cjhvbksfb0004tij9izi6zg5o" class="article-share-link">Share</a>
+      <a data-url="https://seokyeongheo.github.io/2018/06/01/index/" data-id="cjhva8g4d00043jj9e10i9w1o" class="article-share-link">Share</a>
       
       
     </footer>
@@ -309,7 +606,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://seokyeongheo.github.io/2018/05/28/post/" data-id="cjhvbksey0001tij9m1nyb1t8" class="article-share-link">Share</a>
+      <a data-url="https://seokyeongheo.github.io/2018/05/28/post/" data-id="cjhva8g4100013jj99h8fgop3" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/TIL-math-CS-수학-데이터사이언스-패스트캠퍼스-선형대수-이상화-3B1B-오답노트/">TIL, math, CS, 수학, 데이터사이언스, 패스트캠퍼스, 선형대수, 이상화, 3B1B, 오답노트</a></li></ul>
@@ -366,19 +663,23 @@
       <ul>
         
           <li>
-            <a href="/2018/06/01/HTML_intro/">HTML 기본 개념</a>
+            <a href="/2018/06/01/CSS_selector/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/06/01/CSS-selector/">CSS_selector</a>
+          </li>
+        
+          <li>
+            <a href="/2018/06/01/HTML_layout/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/06/01/HTML_intro/">HTML_01</a>
           </li>
         
           <li>
             <a href="/2018/06/01/test/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2018/06/01/index/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2018/05/28/post/">TIL 1일차</a>
           </li>
         
       </ul>

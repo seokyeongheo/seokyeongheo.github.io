@@ -5,19 +5,20 @@
   
 
   
-  <title>Archives | Surfing Education, Through Data</title>
+  <title>Surfing Education, Through Data</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="seokyeong&apos;s blog. Focusing on Education.">
+  <meta name="description" content="데이터 사이언스 스쿨                       /* css selector *              /* 1. ID selector */             /* 아이디를 셀렉할 때는 #(아이디 이름)으로 선택한다 */             /* 여러 개를 선택할 때는 &quot;,&quot; 로">
 <meta name="keywords" content="education, datascience, Media">
-<meta property="og:type" content="website">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Surfing Education, Through Data">
-<meta property="og:url" content="https://seokyeongheo.github.io/archives/index.html">
+<meta property="og:url" content="https://seokyeongheo.github.io/2018/06/01/CSS_selector/index.html">
 <meta property="og:site_name" content="Surfing Education, Through Data">
-<meta property="og:description" content="seokyeong&apos;s blog. Focusing on Education.">
+<meta property="og:description" content="데이터 사이언스 스쿨                       /* css selector *              /* 1. ID selector */             /* 아이디를 셀렉할 때는 #(아이디 이름)으로 선택한다 */             /* 여러 개를 선택할 때는 &quot;,&quot; 로">
 <meta property="og:locale" content="KOREAN">
+<meta property="og:updated_time" content="2018-06-01T03:44:15.050Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Surfing Education, Through Data">
-<meta name="twitter:description" content="seokyeong&apos;s blog. Focusing on Education.">
+<meta name="twitter:description" content="데이터 사이언스 스쿨                       /* css selector *              /* 1. ID selector */             /* 아이디를 셀렉할 때는 #(아이디 이름)으로 선택한다 */             /* 여러 개를 선택할 때는 &quot;,&quot; 로">
   
     <link rel="alternate" href="/atom.xml" title="Surfing Education, Through Data" type="application/atom+xml">
   
@@ -64,130 +65,131 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
+        <section id="main"><article id="post-CSS_selector" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/06/01/CSS_selector/" class="article-date">
+  <time datetime="2018-06-01T03:09:25.981Z" itemprop="datePublished">2018-06-01</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
     
     
+    <div class="article-entry" itemprop="articleBody">
       
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
+        <!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+
+        <!-- 메타 태그는 정보를 넣어준다-->
+        <title>데이터 사이언스 스쿨</title>
+        <style media="screen">
+
+            /* css selector *
+
+            /* 1. ID selector */
+            /* 아이디를 셀렉할 때는 #(아이디 이름)으로 선택한다 */
+            /* 여러 개를 선택할 때는 "," 로 구분해서 넣어준다 */
+            /*  가능하면 ID로 셀렉팅을 해주는 것이 좋다 */
+            /* #ds2, #d3{
+                color: red;
+            } */
+
+            /* 2. Class selector */
+            /* 클래스를 셀렉할 때는 .(클래스 이름)으로 선택한다 */
+            /* 엘리먼트를 묶어서 같은 CSS를 적용할 때 사용한다 */
+
+            /* .ds1{
+                font-size: 24px;
+                margin: 5px 20px 10px 30px;
+            } */
+
+            /* 3. Not selector */
+            /* 셀렉터로 엘리먼트를 하나만 제거하고 싶을 때 사용한다  */
+            /* .ds:not(.ds2){
+                color : blue;
+            } */
+
+            /* 4. first-child selector */
+            /* .ds:first-child{
+                background-color: yellow;
+            } */
+
+            /* 5. first-child selector */
+            /* .ds:last-child{
+                background-color: yellow;
+            } */
+
+            /* 6.nth- : n번째 child를 이용해서 엘리먼트 셀렉트 */
+            .ds:nth_child(4), .ds:nth-child(3){
+                background-color: yellow;
+            }
+
+            /* 7. deepth, level로 엘리먼트 셀렉트 */
+            /* 공백문자로 하위 엘리먼트를 셀렉트 했을때, 모든 하위 엘리먼트를 셀렉팅합니다  */
+            .constants h1{
+                font-weight: lighter;
+            }
+
+body > div > h1{
+    color: red;
+}
+
+
+
+        </style>
+    </head>
+    <body>
+        <p id="ds1">dss1</p>
+        <p id="ds2">dss2</p>
+        <p id="ds3">dss3</p>
+
+        <p class="ds1">dss1</p>
+        <p class="ds1">dss2</p>
+        <p class="ds2">dss3</p>
+        <p class="ds2">dss4</p>
+
+        <p class="ds ds1">ds1</p>
+        <p class="ds ds2">ds2</p>
+        <p class="ds ds3">ds3</p>
+        <p class="ds ds4">ds4</p>
+        <p class="ds ds5">ds5</p>
+
+        <div class="contants">
+            <h1>inner_1</h1>
+            <div class="txt">
+                <h1>inner_2</h1>
+            </div>
         </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/06/01/CSS_selector/" class="archive-article-date">
-  <time datetime="2018-06-01T03:09:25.981Z" itemprop="datePublished">Jun 1</time>
-</a>
-      
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/06/01/CSS-selector/" class="archive-article-date">
-  <time datetime="2018-06-01T03:08:04.000Z" itemprop="datePublished">Jun 1</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/01/CSS-selector/">CSS_selector</a>
-    </h1>
-  
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/06/01/HTML_layout/" class="archive-article-date">
-  <time datetime="2018-06-01T02:15:36.649Z" itemprop="datePublished">Jun 1</time>
-</a>
-      
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/06/01/HTML_intro/" class="archive-article-date">
-  <time datetime="2018-06-01T01:19:29.000Z" itemprop="datePublished">Jun 1</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/01/HTML_intro/">HTML_01</a>
-    </h1>
-  
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/06/01/test/" class="archive-article-date">
-  <time datetime="2018-06-01T01:00:45.276Z" itemprop="datePublished">Jun 1</time>
-</a>
-      
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/06/01/index/" class="archive-article-date">
-  <time datetime="2018-06-01T00:51:06.589Z" itemprop="datePublished">Jun 1</time>
-</a>
-      
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/05/28/post/" class="archive-article-date">
-  <time datetime="2018-05-28T12:00:07.000Z" itemprop="datePublished">May 28</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/05/28/post/">TIL 1일차</a>
-    </h1>
-  
 
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
+    </body>
+</html>
 
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://seokyeongheo.github.io/2018/06/01/CSS_selector/" data-id="cjhve480x0006drj9rgm9mlbl" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/06/01/CSS-selector/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">CSS_selector</div>
+    </a>
+  
+</nav>
+
+  
+</article>
 
 </section>
         
