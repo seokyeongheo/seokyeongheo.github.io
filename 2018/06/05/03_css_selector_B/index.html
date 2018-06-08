@@ -7,18 +7,18 @@
   
   <title>Surfing Education, Through Data</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Heading         Heading         Heading         Heading         Heading         Heading                                      데이터 사이언스         패스트 캠퍼스          span-tag-0         span-">
+  <meta name="description" content="데이터 사이언스 스쿨               /* css selector */          /* 1. ID Selector */         /* 아이디를 셀렉할때는 #(아이디 이름)으로 선택합니다. */         /* 여러개를 셀렉할때는 ,로 구분해 넣어줍니다. */         /* #ds2, #ds3{">
 <meta name="keywords" content="education, datascience, Media">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Surfing Education, Through Data">
-<meta property="og:url" content="https://seokyeongheo.github.io/2018/06/01/index/index.html">
+<meta property="og:url" content="https://seokyeongheo.github.io/2018/06/05/03_css_selector_B/index.html">
 <meta property="og:site_name" content="Surfing Education, Through Data">
-<meta property="og:description" content="Heading         Heading         Heading         Heading         Heading         Heading                                      데이터 사이언스         패스트 캠퍼스          span-tag-0         span-">
+<meta property="og:description" content="데이터 사이언스 스쿨               /* css selector */          /* 1. ID Selector */         /* 아이디를 셀렉할때는 #(아이디 이름)으로 선택합니다. */         /* 여러개를 셀렉할때는 ,로 구분해 넣어줍니다. */         /* #ds2, #ds3{">
 <meta property="og:locale" content="KOREAN">
-<meta property="og:updated_time" content="2018-06-01T02:04:16.942Z">
+<meta property="og:updated_time" content="2018-06-05T00:50:48.359Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Surfing Education, Through Data">
-<meta name="twitter:description" content="Heading         Heading         Heading         Heading         Heading         Heading                                      데이터 사이언스         패스트 캠퍼스          span-tag-0         span-">
+<meta name="twitter:description" content="데이터 사이언스 스쿨               /* css selector */          /* 1. ID Selector */         /* 아이디를 셀렉할때는 #(아이디 이름)으로 선택합니다. */         /* 여러개를 셀렉할때는 ,로 구분해 넣어줍니다. */         /* #ds2, #ds3{">
   
     <link rel="alternate" href="/atom.xml" title="Surfing Education, Through Data" type="application/atom+xml">
   
@@ -65,10 +65,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-index" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-03_css_selector_B" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/06/01/index/" class="article-date">
-  <time datetime="2018-06-01T00:51:06.589Z" itemprop="datePublished">2018-06-01</time>
+    <a href="/2018/06/05/03_css_selector_B/" class="article-date">
+  <time datetime="2018-06-05T00:37:58.371Z" itemprop="datePublished">2018-06-05</time>
 </a>
     
   </div>
@@ -80,46 +80,105 @@
         <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
+<head>
+    <meta charset="utf-8">
+    <title>데이터 사이언스 스쿨</title>
+    <style media="screen">
 
-    <head>
-        <h1>Heading</h1>
-        <h2>Heading</h2>
-        <h3>Heading</h3>
-        <h4>Heading</h4>
-        <h5>Heading</h5>
-        <h6>Heading</h6>
+        /* css selector */
 
-        <meta charset="utf-8">
-        <title></title>
-    </head>
-    <body>
-        <p>데이터 사이언스</p>
-        <p>패스트 캠퍼스</p>
+        /* 1. ID Selector */
+        /* 아이디를 셀렉할때는 #(아이디 이름)으로 선택합니다. */
+        /* 여러개를 셀렉할때는 ,로 구분해 넣어줍니다. */
+        /* #ds2, #ds3{
+            color: red;
+        } */
 
-        <span class="s1">span-tag-0</span>
-        <span class="s2">span-tag-1</span>
-        <span class="s3">span-tag-2</span>
+        /* 2. Class Selector */
+        /* 클래스를 셀렉할때는 .(클래스 이름)으로 선택합니다. */
+        /* 엘리먼트를 묶어서 같은 css를 적용할 때 사용합니다. */
+        /* margin: 5px 20px 10px 30px; */
+        /* .ds1{
+            font-size: 24px;
+            margin: 10px 20px;
+        } */
 
-        <p>
-            python
-            datascience
-        </p>
+        /* 3. not Selector */
+        /* 셀렉터로 엘리먼트를 하나만 제거하고 싶을때 사용합니다. */
+        /* .ds:not(.ds2){
+            color: blue;
+        } */
 
-        <pre>
-            python
-            datascience
-        </pre>
+        /* 4. first-child Selector */
+        /* .ds:first-child{
+            background-color: yellow;
+        } */
 
-        <p><b>강조한다, 굵다!</b></p>
-        <p><strong>강조한다, 굵다!</strong></p>
+        /* 5. last-child Selector */
+        /* .ds:last-child{
+            background-color: yellow;
+        } */
 
-    </body>
+        /* 6. nth-child : n번째 엘리먼트 셀렉트 */
+        /* .ds:nth-child(4), .ds:nth-child(3){
+            background-color: yellow;
+        } */
+
+        /* 7. deepth, level로 엘리먼트 셀렉트 */
+        /* 공백문자로 하위 엘리먼트를 셀렉트 했을때, 모든 하위 엘리먼트를 셀렉팅 합니다. */
+        /* .contants h1{
+            font-weight: lighter;
+        } */
+
+        /* .contants > h1{
+            font-weight: lighter;
+        } */
+
+        body > div > h1{
+            color: red;
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+    <!-- p#ds${dss$}*3 -->
+    <!-- <p id="ds1">dss1</p>
+    <p id="ds2">dss2</p>
+    <p id="ds3">dss3</p> -->
+
+    <!-- p.ds1{dss$}*2+p.ds2{dss$@3}*2 -->
+    <!-- <p class="ds1">dss1</p>
+    <p class="ds1">dss2</p>
+    <p class="ds2">dss3</p>
+    <p class="ds2">dss4</p> -->
+
+    <!-- p.ds.ds${ds$}*5 -->
+    <!-- <p class="ds ds1">ds1</p>
+    <p class="ds ds2">ds2</p>
+    <p class="ds ds3">ds3</p>
+    <p class="ds ds4">ds4</p>
+    <p class="ds ds5">ds5</p> -->
+
+    <!-- div.contants>div.txt>h1{inner_1}^h1{inner_2} -->
+    <!-- <div class="contants">
+        <h1>inner_1</h1>
+        <div class="txt">
+            <h1>inner_2</h1>
+        </div>
+    </div> -->
+
+
+</body>
+
 </html>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://seokyeongheo.github.io/2018/06/01/index/" data-id="cjhvkg8l60003kgj90cr46924" class="article-share-link">Share</a>
+      <a data-url="https://seokyeongheo.github.io/2018/06/05/03_css_selector_B/" data-id="cji0yhezz0004caj9obpm7gdi" class="article-share-link">Share</a>
       
       
     </footer>
@@ -128,19 +187,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2018/06/01/HTML_01/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          HTML _ 01
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/05/28/TIL 1st/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2018/06/01/HTML_02/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">TIL 1일차</div>
+      <div class="article-nav-title"></div>
     </a>
   
 </nav>
