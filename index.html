@@ -5,21 +5,18 @@
   
 
   
-  <title>Learning Through Data</title>
+  <title>THIS IS NOT A TECH BLOG</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="seokyeong&apos;s blog. Focusing on Education.">
-<meta name="keywords" content="education, datascience, Media">
+  <meta name="keywords" content="education, datascience, Media">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Learning Through Data">
+<meta property="og:title" content="THIS IS NOT A TECH BLOG">
 <meta property="og:url" content="https://seokyeongheo.github.io/index.html">
-<meta property="og:site_name" content="Learning Through Data">
-<meta property="og:description" content="seokyeong&apos;s blog. Focusing on Education.">
+<meta property="og:site_name" content="THIS IS NOT A TECH BLOG">
 <meta property="og:locale" content="KOREAN">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Learning Through Data">
-<meta name="twitter:description" content="seokyeong&apos;s blog. Focusing on Education.">
+<meta name="twitter:title" content="THIS IS NOT A TECH BLOG">
   
-    <link rel="alternate" href="/atom.xml" title="Learning Through Data" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="THIS IS NOT A TECH BLOG" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -38,7 +35,7 @@
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="/" id="logo">Learning Through Data</a>
+        <a href="/" id="logo">THIS IS NOT A TECH BLOG</a>
       </h1>
       
     </div>
@@ -67,10 +64,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-LinearAlgebra_1" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-naivebayes" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/08/21/LinearAlgebra_1/" class="article-date">
-  <time datetime="2018-08-21T07:30:00.000Z" itemprop="datePublished">2018-08-21</time>
+    <a href="/2018/12/12/naivebayes/" class="article-date">
+  <time datetime="2018-12-12T13:49:05.000Z" itemprop="datePublished">2018-12-12</time>
 </a>
     
   </div>
@@ -81,7 +78,156 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/21/LinearAlgebra_1/">선형대수 공부 방법</a>
+      <a class="article-title" href="/2018/12/12/naivebayes/">naivebayes</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="확률적-모형"><a href="#확률적-모형" class="headerlink" title="확률적 모형"></a>확률적 모형</h3><ul>
+<li>나이브 베이즈 분류 모형은 “확률적(probabilistic)”, “생성(generative)” 모형 중 하나이다.</li>
+<li>확률적 생성 모형은, 주어진 데이터에 대해 각 카테고리(혹은 클래스)가 정답일 조건부 확률을 계산하기 때문에 확률적 모형에 속한다.</li>
+<li>확률적 모형은 독립변수 $x$가 주어졌을 때, 종속변수 $y$가 될 확률 $P(y = k \mid x)$를 모두 계산하고(1), 다음으로 가장 확률이 큰 클래스를 선택한다.(2)</li>
+</ul>
+<p>$$<br>\text{(1)     }<br>\begin{eqnarray}<br>P_1 &amp;=&amp; P(y = 1 \mid x) \<br>\vdots &amp; &amp; \vdots \<br>P_K &amp;=&amp; P(y = K \mid x)<br>\end{eqnarray}<br>$$</p>
+<p>$$<br>\text{(2)     }<br>y = \arg\max_{k} P(y=k \mid x)<br>$$</p>
+<ul>
+<li>확률적 모형은 생성모형(generative model)과 판별모형(discriminative model)로 나뉜다.</li>
+</ul>
+<h3 id="확률적-생성모형"><a href="#확률적-생성모형" class="headerlink" title="확률적 생성모형"></a>확률적 생성모형</h3><ul>
+<li>생성모형은 각 클래스(종속변수) 별 특징 데이터(독립변수)의 확률분포 $P(x \mid y = k)$를 추정한 다음, 베이즈 정리를 사용하여 조건부확률 $P(y = k | x)$를 계산하는 방법이다.</li>
+</ul>
+<p>$$ P(y = k \mid x) = \dfrac{P(x \mid y = k) P(y = k)}{P(x)}$$</p>
+<ul>
+<li><p>생성모형은 전체 확률의 법칙을 이용하여 특정 데이터(독립변수) $x$ 의 무조건부 확률분포 $P(x)$ 를 구할 수 있다.<br>$$ P(x) = \sum_{k=1}^K P(x \mid y) P(y = k)$$</p>
+</li>
+<li><p>새로운 가상의 특징 데이터를 생성해내거나, 특징 데이터만으로도 아웃라이어를 판단할 수 있다는 장점이 있다. 반면, 클래스가 많을 경우 불필요한 확률 분포를 계산한다는 단점이 있다.</p>
+</li>
+<li><p>확률적 생성모형으로는 QDA, LDA, 나이브 베이즈 알고리즘을 예로 들 수 있다.</p>
+</li>
+</ul>
+<h3 id="나이브-베이즈-분류-모형"><a href="#나이브-베이즈-분류-모형" class="headerlink" title="나이브 베이즈 분류 모형"></a>나이브 베이즈 분류 모형</h3><ul>
+<li>나이브 베이즈 분류 모형은 나이브 가정을 베이즈 분류에 적용한 모형이다.</li>
+<li>나이브 가정은 독립변수 x가 다차원인 경우, 모든 차원의 개별 독립 변소 요소(component)가 서로 조건부 독립(conditional independent)이라는 가정이다.</li>
+<li>나이브 가정을 베이즈 분류에 적용하는 이유는, 텍스트 데이터처럼 독립변수가 차원이 높으면, 다차원 결합확률을 실제로 구하기 어렵기 때문이다. 이때, 나이브 가정을 적용하면, 단순히 곱하기만 해도 다차원 결합확률을 쉽게 구할 수 있다.</li>
+<li>나이브 베이즈 분류 모형은 $x$ 벡터의 결합 확률을 개별 원소 $x_d$확률의 곱으로 표현한다.</li>
+</ul>
+<p>$$P(x_1, \ldots, x_D \mid y = k) = \prod_{d=1}^D P(x_d \mid y = k)$$</p>
+<p>$$P(y = k \mid x) \;\; \propto \;\; \prod_{d=1}^D P(x_d \mid y = k)$$</p>
+<h4 id="부록-베이즈-정리"><a href="#부록-베이즈-정리" class="headerlink" title="부록: 베이즈 정리"></a>부록: 베이즈 정리</h4><ul>
+<li>베이즈정리는 조건부 확률을 구하는 다음 공식을 뜻한다.</li>
+</ul>
+<p>$$ P(A \mid B) = \dfrac{P(B \mid A)P(A)}{P(B)}$$</p>
+<pre><code>- $P(A \mid B)$ : 사후확률. 사건 B가 발생한 후 갱신된 사건 A의 확률
+- $P(A)$ : 사전확률. 사건 B가 발생하기 전 사건 A의 확률
+- $P(B \mid A)$ : 가능도. 사건 A가 발생한 경우, 사건 B의 확률
+- $P(B)$ : 정규화 상수. 확률의 크기 조정
+</code></pre><h4 id="부록-전체확률의-법칙"><a href="#부록-전체확률의-법칙" class="headerlink" title="부록: 전체확률의 법칙"></a>부록: 전체확률의 법칙</h4><ul>
+<li>전체확률의 법칙은, 모든 사건 $A$에 대해 사건 $A$의 확률은 사건 $A$와 사건 $Ci$가 동시에 발생할 사건들의 확률의 합과 같다.</li>
+</ul>
+<p>$$P(A) = \sum_i P(A \cap C_i)$$</p>
+<h3 id="모형-선택-가우시안-정규-분포-베르누이-분포-다항-분포"><a href="#모형-선택-가우시안-정규-분포-베르누이-분포-다항-분포" class="headerlink" title="모형 선택 : 가우시안 정규 분포, 베르누이 분포, 다항 분포"></a>모형 선택 : 가우시안 정규 분포, 베르누이 분포, 다항 분포</h3><ul>
+<li><p>가우시안 정규 분포 가능도 모형</p>
+<ul>
+<li>가우시안 정규 분포 가능도 모형은 $x$ 벡터의 원소가 모두 실수이고, 클래스마다 특정 값 주변에서 발생하면 사용한다.</li>
+<li>각 독립변수 $x_d$ 마다, 그리고 클래스 $k$ 마다 정규 분포의 기댓값 $\mu_{d,k}$, 표준편차 $\sigma^2_{d,k}$ 가 달라진다.</li>
+<li><p>QDA 모형과 달리 모든 독립변수들이 서로 조건부 독립이라 가정한다.</p>
+<p>$$P(x_d \mid y = k) = \dfrac{1}{\sqrt{2\pi\sigma_{d,k}^2}} \exp \left(-\dfrac{(x_d-\mu_{d,k})^2}{2\sigma_{d,k}^2}\right)$$</p>
+</li>
+</ul>
+</li>
+<li><p>베르누이 분포 가능도 모형</p>
+<ul>
+<li>베르누이 분포 가능도 모형은 각각의 $x_1, \ldots, x_D$의 원소 $x_d$가 0 또는 1이라는 값만 가질 수 있다.</li>
+<li>각 값의 모수 $\mu_d$는 원소 $x_d$, 클래스 $y_k$ 마다 다르다.</li>
+<li>정리하면, 베르누이 분포 가능도 모형 기반 나이브 베이즈 분류 모형은 동전 세트를 $N$ 번 던진 결과로부터 $1, \ldots, K$ 중 어떤 동전 세트를 던졌는지 찾아내는 모형이라 할 수 있다.</li>
+</ul>
+</li>
+</ul>
+<p>$$P(x_d \mid y = k) = \mu_{d,k}^{x_d} (1-\mu_{d,k})^{(1-x_d)}$$</p>
+<p>$$P(x_1, \ldots, x_D \mid y = k)= \prod_{d=1}^D \mu_{d,k}^{x_d} (1-\mu_{d,k})^{(1-x_d)}$$</p>
+<ul>
+<li>다항 분포 가능도 모형<ul>
+<li>다항 분포 모형은 독립변수 $x$ 벡터가 다항 확률 분포의 샘플이라 가정한다. 즉, $D$ 개의 면을 가지는 주사위를 $\sum_{d=1}^D x_d$ 번 던져서 나온 결과로 보는 셈.</li>
+</ul>
+</li>
+</ul>
+<p>$$P(x_1, \ldots, x_D \mid y = k)<br>\;\; \propto \;\; \prod_{d=1}^D \mu_{d,k}^{x_{d,k}}$$</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://seokyeongheo.github.io/2018/12/12/naivebayes/" data-id="cjpl8hmhj000072a57gy1jkya" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/naivebayes-machinelearning-korean-tutorial/">naivebayes, machinelearning, korean, tutorial</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-linear-algebra-2" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/09/06/linear-algebra-2/" class="article-date">
+  <time datetime="2018-09-06T09:12:06.000Z" itemprop="datePublished">2018-09-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/09/06/linear-algebra-2/">linear-algebra-2</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>행렬의 부호는 어떻게 판별하는가</p>
+<p>행렬에 부호는 존재하지 않는다. 대신, 부호와 비슷한 개념은 존재한다.</p>
+<ul>
+<li>양의 준정부호 : 영벡터를 제외하고 무엇을 벡터(x)로 넣든지 이차형식(quadratic form)이 양수, 0인 경우</li>
+<li>양의 정부호 : 영벡터를 제외하고 무엇을 벡터(x)로 넣든지 이차형식(quadratic form)이 양수인 경우</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://seokyeongheo.github.io/2018/09/06/linear-algebra-2/" data-id="cjpl8hmhp000172a5jg958vf5" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-linear-algebra-1" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/09/05/linear-algebra-1/" class="article-date">
+  <time datetime="2018-09-05T10:39:11.000Z" itemprop="datePublished">2018-09-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/09/05/linear-algebra-1/">선형대수란 무엇인가?</a>
     </h1>
   
 
@@ -91,16 +237,42 @@
       
         <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
-<p>$$ \sum_{i=1}^N \sum_{j=1}^M = \sum_{j=1}^M \sum_{i=1}^N $$</p>
+<p>선형대수는 왜 선형대수인가?<br>선형대수는 왜 행렬을 가르치는가?<br>선형대수는 데이터과학에 어떻게 사용되는가?</p>
+<h3 id="선형대수를-사용하는-이유-김도형-박사님-강의노트"><a href="#선형대수를-사용하는-이유-김도형-박사님-강의노트" class="headerlink" title="선형대수를 사용하는 이유 - 김도형 박사님 강의노트"></a>선형대수를 사용하는 이유 - 김도형 박사님 강의노트</h3><p>선형대수를 사용하면 대량의 데이터를 포함하는 복잡한 계산 과정을 몇 글자 되지 않는 간단한 수식으로 서술할 수 있다. 따라서 데이터를 다루는 과정을 정확하고 간단하게 서술할 수 있다. 이를 위해 우선 선형대수에서 사용되는 여러 가지 기호와 개념을 익혀보자.</p>
+<p>“선형대수(linear algebra)는 데이터 분석에 필요한 각종 계산을 돕기 위한 학문”. 데이터 분석을 하려면 수많은 숫자로 이루어진 데이터를 다루어야 한다. 하나의 데이터가 수십 개에서 수만 개의 숫자로 이루어져 있을 수도 있고, 또 이러한 데이터 수만 개가 하나의 집합을 이루고 있을 수도 있다.</p>
+<ul>
+<li><p>어떻게 가능한가?<br>-&gt; 선형대수는 선형성을 띈 수식을 처리하는 학문이기 때문이다.</p>
+</li>
+<li><p>선형성이란 무엇인가?<br>-&gt;</p>
+<h3 id="선형대수가-복잡한-계산-과정을-간단한-수식으로-표현할-수-있는-이유"><a href="#선형대수가-복잡한-계산-과정을-간단한-수식으로-표현할-수-있는-이유" class="headerlink" title="선형대수가 복잡한 계산 과정을 간단한 수식으로 표현할 수 있는 이유"></a>선형대수가 복잡한 계산 과정을 간단한 수식으로 표현할 수 있는 이유</h3></li>
+</ul>
+<p>모든 함수, 연산(계산)을 행렬의 형태로 표현할 수는 없다.</p>
+<p>선형성(linearity)이 존재할 때 함수, 연산을 행렬로 표현할 수 있다.<br>1superposition<br>2homogeniety</p>
+<p>원점을 통과하지 않는 직선(y = mx + n)은 선형성의 두 요건을 만족하지 못해 선형성을 띄지 않는다. 기울기(m)은 선형성이 있지만, x-y에는 선형성이 없다. 기울기는 항상 일정해서 두 변수 간 일정한 관계식이 있지만.</p>
+<p>-&gt; 두 요건을 만족하면 왜 선형성을 띈다고 하는 것일까?<br>-&gt; 선형성이 없다는 것은 비례하지 않는다는 것인가.</p>
+<p>미분, 적분도 선형성을 만족하기 때문에 행렬로 표현해서 연산할 수 있다.</p>
+<p>행렬도 마찬가지다.</p>
+<p>어떠한 수식도 선형성만 만족한다면 행렬로 표현해서 간단하게 연산할 수 있다.</p>
+<p>위 조건만 만족한다면, 복잡한 연산도 쉽게 풀 수 있다.</p>
+<ul>
+<li>선형성을 띈 수식을 어떻게 처리한다는 것인가?</li>
+<li>데이터 하나하나 (하나의 스칼라, 하나의 벡터)를 하나씩 연산하지 않고 하나의 행렬로 묶어 연산할 수 있다</li>
+<li>모든 개별 데이터(스칼라)에 같은 수식을 개별적으로 적용하지 않고 동시에 적용할 수 있다(브로드캐스팅)</li>
+</ul>
+<ul>
+<li>reference</li>
+</ul>
+<p>박사님 강의노트</p>
+<p>KOCW 선형대수(이상화 교수님)</p>
+<p>선형이라는 것의 의미 (Linear 하다는 것의 의미)<br><a href="http://sdolnote.tistory.com/entry/Linearity" target="_blank" rel="noopener">http://sdolnote.tistory.com/entry/Linearity</a></p>
+<p>Linear, Linearity, Linear System   선형, 선형성, 선형 시스템, 선형계<br><a href="http://www.ktword.co.kr/abbr_view.php?m_temp1=2632" target="_blank" rel="noopener">http://www.ktword.co.kr/abbr_view.php?m_temp1=2632</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://seokyeongheo.github.io/2018/08/21/LinearAlgebra_1/" data-id="cjl3e3v080007aza5xd74xy2g" class="article-share-link">Share</a>
+      <a data-url="https://seokyeongheo.github.io/2018/09/05/linear-algebra-1/" data-id="cjpl8hmhv000372a5j0nimhjw" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/패스트캠퍼스-수학-선형대수-기초/">패스트캠퍼스, 수학, 선형대수, 기초</a></li></ul>
-
     </footer>
   </div>
   
@@ -164,7 +336,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://seokyeongheo.github.io/2018/06/15/post/" data-id="cjl3dacsy0005aza5hypepk7n" class="article-share-link">Share</a>
+      <a data-url="https://seokyeongheo.github.io/2018/06/15/post/" data-id="cjpl8hmhx000472a5ocad0b0i" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/데이터사이언스-스터디-프로젝트-준비-흥미-패러다임-공부법-대비-패스트캠퍼스/">데이터사이언스, 스터디, 프로젝트, 준비, 흥미, 패러다임, 공부법, 대비, 패스트캠퍼스</a></li></ul>
@@ -192,7 +364,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/데이터사이언스-스터디-프로젝트-준비-흥미-패러다임-공부법-대비-패스트캠퍼스/">데이터사이언스, 스터디, 프로젝트, 준비, 흥미, 패러다임, 공부법, 대비, 패스트캠퍼스</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/패스트캠퍼스-수학-선형대수-기초/">패스트캠퍼스, 수학, 선형대수, 기초</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/naivebayes-machinelearning-korean-tutorial/">naivebayes, machinelearning, korean, tutorial</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/데이터사이언스-스터디-프로젝트-준비-흥미-패러다임-공부법-대비-패스트캠퍼스/">데이터사이언스, 스터디, 프로젝트, 준비, 흥미, 패러다임, 공부법, 대비, 패스트캠퍼스</a></li></ul>
     </div>
   </div>
 
@@ -205,7 +377,15 @@
       <ul>
         
           <li>
-            <a href="/2018/08/21/LinearAlgebra_1/">선형대수 공부 방법</a>
+            <a href="/2018/12/12/naivebayes/">naivebayes</a>
+          </li>
+        
+          <li>
+            <a href="/2018/09/06/linear-algebra-2/">linear-algebra-2</a>
+          </li>
+        
+          <li>
+            <a href="/2018/09/05/linear-algebra-1/">선형대수란 무엇인가?</a>
           </li>
         
           <li>

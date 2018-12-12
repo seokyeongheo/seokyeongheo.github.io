@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>선형대수란 무엇인가? | THIS IS NOT A TECH BLOG</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="선형대수는 왜 선형대수인가?선형대수는 왜 행렬을 가르치는가?선형대수는 데이터과학에 어떻게 사용되는가? 선형대수를 사용하는 이유 - 김도형 박사님 강의노트선형대수를 사용하면 대량의 데이터를 포함하는 복잡한 계산 과정을 몇 글자 되지 않는 간단한 수식으로 서술할 수 있다. 따라서 데이터를 다루는 과정을 정확하고 간단하게 서술할 수 있다. 이를 위해 우선 선">
+<meta name="keywords" content="education, datascience, Media">
+<meta property="og:type" content="article">
+<meta property="og:title" content="선형대수란 무엇인가?">
+<meta property="og:url" content="https://seokyeongheo.github.io/2018/09/05/linear-algebra-1/index.html">
+<meta property="og:site_name" content="THIS IS NOT A TECH BLOG">
+<meta property="og:description" content="선형대수는 왜 선형대수인가?선형대수는 왜 행렬을 가르치는가?선형대수는 데이터과학에 어떻게 사용되는가? 선형대수를 사용하는 이유 - 김도형 박사님 강의노트선형대수를 사용하면 대량의 데이터를 포함하는 복잡한 계산 과정을 몇 글자 되지 않는 간단한 수식으로 서술할 수 있다. 따라서 데이터를 다루는 과정을 정확하고 간단하게 서술할 수 있다. 이를 위해 우선 선">
+<meta property="og:locale" content="KOREAN">
+<meta property="og:updated_time" content="2018-09-06T03:42:55.854Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="선형대수란 무엇인가?">
+<meta name="twitter:description" content="선형대수는 왜 선형대수인가?선형대수는 왜 행렬을 가르치는가?선형대수는 데이터과학에 어떻게 사용되는가? 선형대수를 사용하는 이유 - 김도형 박사님 강의노트선형대수를 사용하면 대량의 데이터를 포함하는 복잡한 계산 과정을 몇 글자 되지 않는 간단한 수식으로 서술할 수 있다. 따라서 데이터를 다루는 과정을 정확하고 간단하게 서술할 수 있다. 이를 위해 우선 선">
+  
+    <link rel="alternate" href="/atom.xml" title="THIS IS NOT A TECH BLOG" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">THIS IS NOT A TECH BLOG</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://seokyeongheo.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-linear-algebra-1" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/09/05/linear-algebra-1/" class="article-date">
+  <time datetime="2018-09-05T10:39:11.000Z" itemprop="datePublished">2018-09-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      선형대수란 무엇인가?
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<p>선형대수는 왜 선형대수인가?<br>선형대수는 왜 행렬을 가르치는가?<br>선형대수는 데이터과학에 어떻게 사용되는가?</p>
+<h3 id="선형대수를-사용하는-이유-김도형-박사님-강의노트"><a href="#선형대수를-사용하는-이유-김도형-박사님-강의노트" class="headerlink" title="선형대수를 사용하는 이유 - 김도형 박사님 강의노트"></a>선형대수를 사용하는 이유 - 김도형 박사님 강의노트</h3><p>선형대수를 사용하면 대량의 데이터를 포함하는 복잡한 계산 과정을 몇 글자 되지 않는 간단한 수식으로 서술할 수 있다. 따라서 데이터를 다루는 과정을 정확하고 간단하게 서술할 수 있다. 이를 위해 우선 선형대수에서 사용되는 여러 가지 기호와 개념을 익혀보자.</p>
+<p>“선형대수(linear algebra)는 데이터 분석에 필요한 각종 계산을 돕기 위한 학문”. 데이터 분석을 하려면 수많은 숫자로 이루어진 데이터를 다루어야 한다. 하나의 데이터가 수십 개에서 수만 개의 숫자로 이루어져 있을 수도 있고, 또 이러한 데이터 수만 개가 하나의 집합을 이루고 있을 수도 있다.</p>
+<ul>
+<li><p>어떻게 가능한가?<br>-&gt; 선형대수는 선형성을 띈 수식을 처리하는 학문이기 때문이다.</p>
+</li>
+<li><p>선형성이란 무엇인가?<br>-&gt;</p>
+<h3 id="선형대수가-복잡한-계산-과정을-간단한-수식으로-표현할-수-있는-이유"><a href="#선형대수가-복잡한-계산-과정을-간단한-수식으로-표현할-수-있는-이유" class="headerlink" title="선형대수가 복잡한 계산 과정을 간단한 수식으로 표현할 수 있는 이유"></a>선형대수가 복잡한 계산 과정을 간단한 수식으로 표현할 수 있는 이유</h3></li>
+</ul>
+<p>모든 함수, 연산(계산)을 행렬의 형태로 표현할 수는 없다.</p>
+<p>선형성(linearity)이 존재할 때 함수, 연산을 행렬로 표현할 수 있다.<br>1superposition<br>2homogeniety</p>
+<p>원점을 통과하지 않는 직선(y = mx + n)은 선형성의 두 요건을 만족하지 못해 선형성을 띄지 않는다. 기울기(m)은 선형성이 있지만, x-y에는 선형성이 없다. 기울기는 항상 일정해서 두 변수 간 일정한 관계식이 있지만.</p>
+<p>-&gt; 두 요건을 만족하면 왜 선형성을 띈다고 하는 것일까?<br>-&gt; 선형성이 없다는 것은 비례하지 않는다는 것인가.</p>
+<p>미분, 적분도 선형성을 만족하기 때문에 행렬로 표현해서 연산할 수 있다.</p>
+<p>행렬도 마찬가지다.</p>
+<p>어떠한 수식도 선형성만 만족한다면 행렬로 표현해서 간단하게 연산할 수 있다.</p>
+<p>위 조건만 만족한다면, 복잡한 연산도 쉽게 풀 수 있다.</p>
+<ul>
+<li>선형성을 띈 수식을 어떻게 처리한다는 것인가?</li>
+<li>데이터 하나하나 (하나의 스칼라, 하나의 벡터)를 하나씩 연산하지 않고 하나의 행렬로 묶어 연산할 수 있다</li>
+<li>모든 개별 데이터(스칼라)에 같은 수식을 개별적으로 적용하지 않고 동시에 적용할 수 있다(브로드캐스팅)</li>
+</ul>
+<ul>
+<li>reference</li>
+</ul>
+<p>박사님 강의노트</p>
+<p>KOCW 선형대수(이상화 교수님)</p>
+<p>선형이라는 것의 의미 (Linear 하다는 것의 의미)<br><a href="http://sdolnote.tistory.com/entry/Linearity" target="_blank" rel="noopener">http://sdolnote.tistory.com/entry/Linearity</a></p>
+<p>Linear, Linearity, Linear System   선형, 선형성, 선형 시스템, 선형계<br><a href="http://www.ktword.co.kr/abbr_view.php?m_temp1=2632" target="_blank" rel="noopener">http://www.ktword.co.kr/abbr_view.php?m_temp1=2632</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://seokyeongheo.github.io/2018/09/05/linear-algebra-1/" data-id="cjpl8hmhv000372a5j0nimhjw" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/09/06/linear-algebra-2/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          linear-algebra-2
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/06/15/post/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">데이터사이언스, 어떻게 공부하고 프로젝트를 해야 할까?</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+      </div>
+      <footer id="footer">
+  
+    <aside id="sidebar" class="outer">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/naivebayes-machinelearning-korean-tutorial/">naivebayes, machinelearning, korean, tutorial</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/데이터사이언스-스터디-프로젝트-준비-흥미-패러다임-공부법-대비-패스트캠퍼스/">데이터사이언스, 스터디, 프로젝트, 준비, 흥미, 패러다임, 공부법, 대비, 패스트캠퍼스</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/12/12/naivebayes/">naivebayes</a>
+          </li>
+        
+          <li>
+            <a href="/2018/09/06/linear-algebra-2/">linear-algebra-2</a>
+          </li>
+        
+          <li>
+            <a href="/2018/09/05/linear-algebra-1/">선형대수란 무엇인가?</a>
+          </li>
+        
+          <li>
+            <a href="/2018/06/15/post/">데이터사이언스, 어떻게 공부하고 프로젝트를 해야 할까?</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 quartz<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
